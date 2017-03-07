@@ -43,7 +43,7 @@ public class MainController extends HttpServlet {
 			req.setAttribute("translation", lt.getTranslation(text,modelId));
 			req.setAttribute("text", text);
 			req.setAttribute("modelId", modelId);
-			dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp/#step3");
+			dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp?mode=translate#step3");
 		}
 
 		else if (req.getParameter("mode").equals("speechtotext")){
@@ -54,7 +54,7 @@ public class MainController extends HttpServlet {
 			String uri = req.getRequestURL()+"?"+req.getQueryString();
 			System.out.println(uri);
 			req.setAttribute("transcription", s2t.getTranscription(new File(filePath)));
-			dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp/#step2");
+			dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp?mode=speechtotext#step1");
 			resp.getWriter().append("Served at: ").append(req.getContextPath());
 		}
 			
