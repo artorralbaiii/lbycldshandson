@@ -54,7 +54,7 @@ public class MainController extends HttpServlet {
 			String uri = req.getRequestURL()+"?"+req.getQueryString();
 			System.out.println(uri);
 			req.setAttribute("transcription", s2t.getTranscription(new File(filePath)));
-			dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/views/home");
+			dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp");
 			System.out.println(dispatcher);
 		}
 			
