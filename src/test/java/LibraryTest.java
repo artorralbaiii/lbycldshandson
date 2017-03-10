@@ -15,11 +15,11 @@ public class LibraryTest {
     
     @Test public void testSomeLibraryMethod2() {
         Library classUnderTest = new Library();
-        assertEquals("getFileName should return 'sample.wav'", classUnderTest.getFileName());
+        assertEquals("sample.wav", classUnderTest.getFileName());
     }    
     
     @Test public void testSomeLibraryMethod3() {
         Library classUnderTest = new Library();
-        assertEquals("getSiteName should return 'http://s2t2t.mybluemix.net'", classUnderTest.getSiteName());
+        assertEquals("http://s2t2t.mybluemix.net", classUnderTest.getSiteName());
     }      
 }
